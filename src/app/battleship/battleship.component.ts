@@ -103,7 +103,7 @@ export class BattleshipComponent implements OnInit {
           if (this.clickCounter < 6) {
           this.yourScore += 5000;
           }
-          if (this.clickCounter > 5 && this.clickCounter < 7) {
+          if (this.clickCounter > 6 && this.clickCounter < 7) {
             this.clickCounter += 3000;
           }
         }
