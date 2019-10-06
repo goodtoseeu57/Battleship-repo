@@ -1,0 +1,14 @@
+<mat-card class="mat-card">
+  <mat-card-title class="mat-card-title" >  Your score  {{yourScore}} </mat-card-title>
+  <mat-card-subtitle class="mat-card-subtitle"> Best score {{bestScore}} </mat-card-subtitle>
+  <mat-card-content class="mat-card-subtitle" > Remaining moves {{clickCounter}}/20 </mat-card-content>
+</mat-card>
+
+<table >
+  <tr *ngFor="let boardRow of boardRows; let i = index; ">
+    <td (click)="hitCell(cell)" *ngFor="let cell of boardRow;" [ngClass]="{'hit': cell.hasBeenClicked}">
+      {{cell.name}}
+      <div class="animationClass" [ngClass]="{'hit': cell.hasBeenClicked , 'circle': !cell.hasBeenClicked }" >{{cell.hasBeenClicked}} </div>
+    </td>
+  </tr>
+</table>

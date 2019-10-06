@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.mat-card {
+  display: flex;
+  flex-direction: column;
+  margin-left: 340px;
+  margin-right: 340px;
+}
+.mat-card-title {
+  text-align: center;
+}
+.mat-card-subtitle {
+  text-align: center;
+}
+
+#BattleshipBoard   {
+  position: relative;
+  width: 100%;
+  min-width: 550px;
+  margin-left: 20px;
+}
+
+#Messages-For-Players {
+  width: 100%;
+  text-align: center;
+  margin-top: 90px;
+  color: darkred;
+  font-size: 45px;
+
+
+}
+
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 0 auto;
+}
+
+td {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid violet;
+  border-radius: 17px;
+}
+
+td:visited {
+  background-color: darkolivegreen;
+}
+
+
+td:hover {
+  background-color: salmon;
+
+}
+td:focus {
+  background-color: violet;
+}
+td:active:after {
+  color: lightblue;
+}
+
+td div {
+  width: 70px;
+  height: 70px;
+}
+
+
+
+.td:visited {
+  background: darkturquoise;
+}
+
+.hit {
+
+  background-color: #5FCF80 !important;
+
+}
+
+.miss {
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  border-radius: 5px;
+  background: #47002B;
+  transform-origin: center center;
+  transform: rotate(45deg);
+  box-shadow: 3px 3px #C77DAA;
+  animation: blow 0.5s ease-in;
+}
