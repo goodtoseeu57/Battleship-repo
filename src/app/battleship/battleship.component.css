@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Fascinate+Inline|Baloo+Bhaina");
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +9,10 @@
   flex-direction: column;
   margin-left: 340px;
   margin-right: 340px;
+  margin-bottom: 100px;
+ 
+ 
+  
 }
 .mat-card-title {
   text-align: center;
@@ -16,22 +21,6 @@
   text-align: center;
 }
 
-#BattleshipBoard   {
-  position: relative;
-  width: 100%;
-  min-width: 550px;
-  margin-left: 20px;
-}
-
-#Messages-For-Players {
-  width: 100%;
-  text-align: center;
-  margin-top: 90px;
-  color: darkred;
-  font-size: 45px;
-
-
-}
 
 
 
@@ -79,9 +68,36 @@ td div {
 .hit {
 
   background-color: #5FCF80 ;
-  animation-duration: 3ms;
+ 
 
 
+}
+
+
+.hit::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  background: #D2995F; 
+  border-radius: 50%;
+  box-shadow: 95px 0 #FCCE9E,
+              30px 0 #D2995F;
+              animation: blow 0.5s ease-in;
+}
+
+.hit::before {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  width: 16px;
+  height: 30px;
+  background: #5A0400;
+  box-shadow: 15px 4px 0 -4px #AC3B35;  
+  transform: rotate(90deg);
 }
 
 .neutral {
@@ -91,6 +107,34 @@ td div {
 
 .miss {
   background-color: red;
+  transform-origin: center center;
+  transform: rotate(45deg);
+  box-shadow: 3px 3px #C77DAA;
+  animation: blow 0.5s ease-in;
+}
+
+@keyframes wave {
+  0% {transform: rotate(-7deg)}
+  100% {transform: rotate(5deg)}
+}
+
+
+@keyframes blow {
+  0% {transform: scale(0);}
+  1% {transform: rotate(45deg);}
+  80% {transform: scale(1.7);}
+  100% {transform: scale(1);}
+}
+
+.miss::after {
+  content: '';
+  width: 60px;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: #47002B;
+  transform: rotate(90deg);
+  box-shadow: 3px -3px #C77DAA;
 }
 
 .mat-container {
@@ -115,6 +159,7 @@ td {
   height: 100px;
   border: 2px solid violet;
   border-radius: 17px;
+  padding: 43px;
 }
 
 td:visited {
@@ -144,3 +189,9 @@ td div {
   background: darkturquoise;
 }
 
+
+
+.type-cell {
+  padding: 93px;
+  text-align: center;
+}
