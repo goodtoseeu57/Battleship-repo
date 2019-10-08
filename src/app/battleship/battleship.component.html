@@ -13,14 +13,10 @@
 
     </td>
   </tr>
-</table>
-
-
-<div [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></<div> -- [ngClass]="{'hit': cell.hasBeenClicked} -->
-
+</table>  -->
 <table class="mat-container">
-  <mat-grid-list [cols]="7" rowHeight="148px" >
-    <mat-grid-tile *ngFor="let cell of newBoardRows; let i = index; ">
+  <mat-grid-list [cols]="7" rowHeight="1:3" >
+    <mat-grid-tile rowspan='1' *ngFor="let cell of newBoardRows; let i = index; ">
       <td  (click)="hitCell(cell)" [ngClass]="{'neutral': cell.typeOfMove === 'Maybe-here' , 'hit': cell.hasBeenClicked && cell.typeOfMove === 'hit' ,
     'miss': cell.hasBeenClicked && cell.typeOfMove === 'miss'}">
         {{cell.typeOfMove}}

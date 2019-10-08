@@ -22,6 +22,7 @@ export class BattleshipComponent implements OnInit {
     bestScore = 200;
     yourScore = 0;
     newBoardRows = [];
+    newAgainBoardRows = [];
     // gridCell: GridCell[];
 
 
@@ -101,6 +102,7 @@ export class BattleshipComponent implements OnInit {
 
      letters = ['A', 'B' , 'C', 'D', 'E', 'F' , 'G'];
      numbers = [1, 2 , 3 , 4 , 5 , 6 , 7 ];
+     
 
 
     ngOnInit() {
@@ -113,18 +115,30 @@ export class BattleshipComponent implements OnInit {
     setupGrid() {
 
       this.letters.forEach((letter) => {
+          let lettersArray = [];
+          
          this.numbers.forEach((number) => {
            let gridcell = new GridCell();
            gridcell.name = letter + number;
            gridcell.typeOfMove = 'Maybe-here';
            gridcell.hasBeenClicked = false;
            this.newBoardRows.push(gridcell);
+           lettersArray.push(gridcell); 
+           
          });
+         console.log(lettersArray);
+         this.newAgainBoardRows.push(lettersArray);
+         
+
+         
+         
 
         });
       console.log(this.newBoardRows);
       console.log(typeof this.newBoardRows);
       console.log(this.boardRows);
+      console.log(this.newAgainBoardRows);
+      
 
 
     }
