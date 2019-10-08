@@ -55,7 +55,7 @@ td:visited {
 
 
 td:hover {
-  background-color: salmon;
+  background-color: beige ;
 
 }
 td:focus {
@@ -78,20 +78,69 @@ td div {
 
 .hit {
 
-  background-color: #5FCF80 !important;
+  background-color: #5FCF80 ;
+  animation-duration: 3ms;
 
+
+}
+
+.neutral {
+
+  background-color : darkgray ;
 }
 
 .miss {
-  width: 60px;
-  height: 10px;
-  position: absolute;
-  top: 30px;
-  left: 5px;
-  border-radius: 5px;
-  background: #47002B;
-  transform-origin: center center;
-  transform: rotate(45deg);
-  box-shadow: 3px 3px #C77DAA;
-  animation: blow 0.5s ease-in;
+  background-color: red;
 }
+
+.mat-container {
+
+
+  column-gap: 200px;
+  width: 300px;
+
+}
+
+.flexc {
+  column-count: 7;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+td {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid violet;
+  border-radius: 17px;
+}
+
+td:visited {
+  background-color: darkolivegreen;
+}
+
+
+td:hover {
+  background-color: beige ;
+
+}
+td:focus {
+  background-color: violet;
+}
+td:active:after {
+  color: lightblue;
+}
+
+td div {
+  width: 70px;
+  height: 70px;
+}
+
+
+
+.td:visited {
+  background: darkturquoise;
+}
+

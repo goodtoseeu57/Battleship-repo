@@ -7,6 +7,7 @@ import { BattleshipComponent } from './battleship/battleship.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule , MatTableModule , MatCardModule
+    BrowserAnimationsModule , MatTableModule , MatCardModule , MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

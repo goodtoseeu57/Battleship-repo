@@ -1,14 +1,31 @@
 <mat-card class="mat-card">
   <mat-card-title class="mat-card-title" >  Your score  {{yourScore}} </mat-card-title>
-  <mat-card-subtitle class="mat-card-subtitle"> Best score {{bestScore}} </mat-card-subtitle>
-  <mat-card-content class="mat-card-subtitle" > Remaining moves {{clickCounter}}/20 </mat-card-content>
+  <mat-card-subtitle  class="mat-card-subtitle"> Best score {{bestScore}} </mat-card-subtitle>
+  <mat-card-content  class="mat-card-subtitle" > Remaining moves {{clickCounter}}/20 </mat-card-content>
 </mat-card>
-
+<!--
 <table >
   <tr *ngFor="let boardRow of boardRows; let i = index; ">
-    <td (click)="hitCell(cell)" *ngFor="let cell of boardRow;" [ngClass]="{'hit': cell.hasBeenClicked}">
-      {{cell.name}}
-      <div class="animationClass" [ngClass]="{'hit': cell.hasBeenClicked , 'circle': !cell.hasBeenClicked }" >{{cell.hasBeenClicked}} </div>
+    <td (click)="hitCell(cell)" *ngFor="let cell of boardRow;" [ngClass]="{'neutral': cell.typeOfMove === 'Maybe-here' , 'hit': cell.hasBeenClicked && cell.typeOfMove === 'hit' ,
+    'miss': cell.hasBeenClicked && cell.typeOfMove === 'miss'}">
+      <div >{{cell.typeOfMove}} </div>
+
+
     </td>
   </tr>
+</table>
+
+
+<div [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></<div> -- [ngClass]="{'hit': cell.hasBeenClicked} -->
+
+<table class="mat-container">
+  <mat-grid-list [cols]="7" rowHeight="148px" >
+    <mat-grid-tile *ngFor="let cell of newBoardRows; let i = index; ">
+      <td  (click)="hitCell(cell)" [ngClass]="{'neutral': cell.typeOfMove === 'Maybe-here' , 'hit': cell.hasBeenClicked && cell.typeOfMove === 'hit' ,
+    'miss': cell.hasBeenClicked && cell.typeOfMove === 'miss'}">
+        {{cell.typeOfMove}}
+      </td>
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </table>
