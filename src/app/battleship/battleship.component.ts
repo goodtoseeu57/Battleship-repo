@@ -74,7 +74,7 @@
                 this.numbers.forEach((number) => {
                     let gridcell = new GridCell();
                     gridcell.name = letter + number;
-                    gridcell.typeOfMove = 'Maybe-here';
+                    gridcell.typeOfMove = 'Try-me';
                     gridcell.hasBeenClicked = false;
                     lettersArray.push(gridcell);
 
@@ -106,7 +106,7 @@
                     if (everyCellHit) {
                         ship.hasBeenSunk = true;
                         console.log(`you win and you sunk the following ship ${ship.name}`);
-                        if (this.clickCounter < 6) {
+                        if (this.clickCounter < 8) {
                             this.yourScore += 1000;
                         }
                         if (this.clickCounter > 8 && this.clickCounter < 9) {
