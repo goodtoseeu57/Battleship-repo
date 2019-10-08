@@ -9,11 +9,11 @@ import { GridCell } from '../gridcell';
     styleUrls: ['./battleship.component.css']
 })
 export class BattleshipComponent implements OnInit {
-  gridCell: Array<GridCell> = [];
-  name: string;
-  public hasBeenClicked: false ;
+    gridCell: Array<GridCell> = [];
+    name: string;
+    public hasBeenClicked: false;
 
-  public typeOfMove: string ;
+    public typeOfMove: string;
 
     constructor() { }
 
@@ -32,33 +32,33 @@ export class BattleshipComponent implements OnInit {
 
 
     boardRows = [
-      [{ name: 'G1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'G2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'G1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'G2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'G3', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'G4', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'G5', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'G6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'G7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'F1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'F2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'F1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'F2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'F3', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'F4', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'F5', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'F6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'F7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'E1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'E2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'E1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'E2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'E4', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'E3', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'E5', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'E6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'E7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'D1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'D2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'D1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'D2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'D3', hasBeenclicked: false, typeOfMove: 'Maybe-here' }, { name: 'D4', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'D5', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'D6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'D7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'C1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'C2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'C1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'C2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'C3', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'C4', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'C5', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'C6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'C7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'B1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'B2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'B1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'B2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'B3', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'B4', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'B5', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'B6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'B7', hasBeenClicked: false, typeOfMove: 'Maybe-here' }],
-      [{ name: 'A1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'A2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
+        [{ name: 'A1', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'A2', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'A3', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'A4', hasBeenClicked: false, typeOfMove: 'Maybe-here' }, { name: 'A5', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
         { name: 'A6', hasBeenClicked: false, typeOfMove: 'Maybe-here' },
@@ -100,9 +100,9 @@ export class BattleshipComponent implements OnInit {
         }
     ];
 
-     letters = ['A', 'B' , 'C', 'D', 'E', 'F' , 'G'];
-     numbers = [1, 2 , 3 , 4 , 5 , 6 , 7 ];
-     
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    numbers = [1, 2, 3, 4, 5, 6, 7];
+
 
 
     ngOnInit() {
@@ -114,31 +114,31 @@ export class BattleshipComponent implements OnInit {
 
     setupGrid() {
 
-      this.letters.forEach((letter) => {
-          let lettersArray = [];
-          
-         this.numbers.forEach((number) => {
-           let gridcell = new GridCell();
-           gridcell.name = letter + number;
-           gridcell.typeOfMove = 'Maybe-here';
-           gridcell.hasBeenClicked = false;
-           this.newBoardRows.push(gridcell);
-           lettersArray.push(gridcell); 
-           
-         });
-         console.log(lettersArray);
-         this.newAgainBoardRows.push(lettersArray);
-         
+        this.letters.forEach((letter) => {
+            let lettersArray = [];
 
-         
-         
+            this.numbers.forEach((number) => {
+                let gridcell = new GridCell();
+                gridcell.name = letter + number;
+                gridcell.typeOfMove = 'Maybe-here';
+                gridcell.hasBeenClicked = false;
+                this.newBoardRows.push(gridcell);
+                lettersArray.push(gridcell);
+
+            });
+            console.log(lettersArray);
+            this.newAgainBoardRows.push(lettersArray);
+
+
+
+
 
         });
-      console.log(this.newBoardRows);
-      console.log(typeof this.newBoardRows);
-      console.log(this.boardRows);
-      console.log(this.newAgainBoardRows);
-      
+        console.log(this.newBoardRows);
+        console.log(typeof this.newBoardRows);
+        console.log(this.boardRows);
+        console.log(this.newAgainBoardRows);
+
 
 
     }
